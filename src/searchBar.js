@@ -3,34 +3,31 @@ import './App.css';
 
 
 class SearchBar extends Component {
-  constructor(props){
-    super(props);
+    constructor(props) {
+        super(props);
 
-    this.state = {
-    	changedCity: ''
+        this.state = {
+            changedCity: ''
+        };
     };
-  };  
 
-onInputChange = (event) => {
-	console.log("onChange");
-	console.log(event.target.value);
-	this.setState({changedCity: event.target.value});
-}
+    onInputChange = (event) => {
+        this.setState({ changedCity: event.target.value });
+    }
 
-getCity = () => {
-	this.props.fetchCityData(this.state.changedCity);
-}
+    getCity = () => {
+        this.props.fetchCityData(this.state.changedCity);
+    }
 
-render () {
-	const {defaultCity} = this.props;	
-	console.log("CITY IN PROPS", defaultCity);
-  return (
-    <div>
+    render() {
+        const { defaultCity } = this.props;
+        return (
+            <div>
     <input type="text" placeholder={defaultCity} onChange={this.onInputChange}/>
     <br/>
     <button onClick={this.getCity}>Enter</button>
     </div>
-  );
-}
+        );
+    }
 }
 export default SearchBar;

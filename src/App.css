@@ -41,11 +41,13 @@
   height: 400px;
   width: 400px;
   color: white;
-/*  background-color: blue;
-*/  background-image: url("https://res.cloudinary.com/osidekweenyasss/image/upload/v1566671316/atmosphere-beautiful-blue-531767.jpg");
-background-position: center; 
-border-radius: 25px;
+  background-image: url("https://res.cloudinary.com/osidekweenyasss/image/upload/v1566671316/atmosphere-beautiful-blue-531767.jpg");
+  background-position: center; 
+  border-radius: 25px;
+}
 
+.cloudy {
+  background-image: url("https://res.cloudinary.com/osidekweenyasss/image/upload/v1566671316/atmosphere-beautiful-blue-531767.jpg");
 }
 
 @keyframes App-logo-spin {

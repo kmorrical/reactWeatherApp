@@ -3,30 +3,27 @@ import './App.css';
 
 
 class WeatherBox extends Component {
-  constructor(props){
-    super(props);
+    constructor(props) {
+        super(props);
 
-    this.state = {
-    	changedCity: ''
+        this.state = {
+            changedCity: ''
+        };
     };
-  };  
 
-onInputChange = (event) => {
-	console.log("onChange");
-	console.log(event.target.value);
-	this.setState({changedCity: event.target.value});
-}
+    onInputChange = (event) => {
+        this.setState({ changedCity: event.target.value });
+    }
 
-temp = (temper) => {
-  var newTemp = Math.round((temper - 273.15) * 9/5 + 32);
-  return newTemp;
-}
+    temp = (temper) => {
+        var newTemp = Math.round((temper - 273.15) * 9 / 5 + 32);
+        return newTemp;
+    }
 
-render () {
-	const {city, lowTemp, highTemp, currentTemp, humidity, conditions} = this.props;	
-	console.log("CITY IN PROPS", city);
-  return (
-    <div className="container">
+    render() {
+        const { city, lowTemp, highTemp, currentTemp, humidity, conditions } = this.props;
+        return (
+            <div className="container">
       <div className="blueWeatherBox">
       <br/>
       <div className="weathertext">{city}</div>
@@ -43,7 +40,7 @@ render () {
 
       </div>
     </div>
-  );
-}
+        );
+    }
 }
 export default WeatherBox;
